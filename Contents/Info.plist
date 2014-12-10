@@ -16,5 +16,7 @@
 	<string>SetResX</string>
 	<key>LSUIElement</key>
 	<string>1</string>
+	<key>NSHighResolutionCapable</key>
+	<string>True</string>
 </dict>
 </plist>

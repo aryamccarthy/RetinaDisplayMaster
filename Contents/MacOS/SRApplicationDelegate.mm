@@ -17,20 +17,7 @@
 
 - (void) showAbout
 {
-	NSString* credits_str = @"This program is provided for free and without any warranty or support.  By using this software, you agree to not hold us liable for any loss or damage.";
-	NSAttributedString* credits = [[[NSAttributedString alloc] initWithString: credits_str] autorelease];
-	NSImage* icon = [NSImage imageNamed: @"Icon_512x512.png"];
-	NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:
-			credits, @"Credits",
-			@"Retina DisplayMenu", @"ApplicationName",
-			@"Beta", @"Version",
-			icon, @"ApplicationIcon",
-			@"Retina DisplayMenu v0.2", @"ApplicationVersion",
-			@"Copyright 2012, Paul Griffin.\nwww.phoenix-dev.com", @"Copyright",
-			nil];
-	[NSApp orderFrontStandardAboutPanelWithOptions: options];
-				
-	
+  [NSApp orderFrontStandardAboutPanel:self];
 }
 
 
@@ -257,15 +244,12 @@
 	
 	NSImage* statusImage = [NSImage imageNamed: @"StatusIcon"];
 	[statusItem setImage: statusImage];
-	/*
-	NSImage* statusImage_selected = [NSImage imageNamed: @"StatusIcon_sel"];
-	[statusItem setAlternateImage: statusImage_selected];
-	*/
 	[statusItem setHighlightMode: YES];
+
+  // Added because the icon disappeared in Dark Mode.
   BOOL supportsDarkMenu = !(floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9);
   if (supportsDarkMenu) {
     [[statusItem image] setTemplate:YES];
-    //[[statusItem alternateImage] setTemplate:YES];
   }
 
 	[self refreshStatusMenu];

@@ -13,12 +13,18 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.phoenix-dev.setresx</string>
 	<key>CFBundleName</key>
-	<string>SetResX</string>
+	<string>RetinaDisplayManager</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.3</string>
+	<key>CFBundleVersion</key>
+	<string>0.3.1</string>
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>NSHighResolutionCapable</key>
 	<string>True</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Distributed under GNU General Public License v3.0</string>
 </dict>
 </plist>

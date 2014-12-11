@@ -17,6 +17,7 @@
 
 - (void) showAbout
 {
+  [NSApp activateIgnoringOtherApps:YES];
   [NSApp orderFrontStandardAboutPanel:self];
 }
 
